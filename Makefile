@@ -3,18 +3,18 @@ all:
 tag=mytag
 
 pull:
-	docker pull  andreacensi/act4e:spring2021
+	docker pull andreacensi/act4e:spring2021
 
 build:
 	docker build  -t $(tag) .
 
 
 check: build
-	docker run -it --rm $(tag) act4e-tests --module act4e_solutions
+	docker run --rm $(tag) act4e-tests --module act4e_solutions
 
 
 check-%: build
-	docker run -it --rm $(tag) act4e-tests --module act4e_solutions --group $*
+	docker run --rm $(tag) act4e-tests --module act4e_solutions --group $*
 
 #
 #check:
