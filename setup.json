@@ -1,0 +1,18 @@
+{
+  "install_requires": [],
+  "tests_require": [],
+  "srcdir": "src",
+  "package_name": "ACT4E-MySolutions",
+  "entry_points": {
+    "console_scripts": []
+  },
+  "zip_safe": true,
+  "include_package_data": true,
+  "modules": [
+    "act4e_solutions"
+  ],
+  "version": "7.1.2104061654",
+  "author": "",
+  "author_email": "",
+  "url": ""
+}
