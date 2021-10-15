@@ -1,4 +1,4 @@
-FROM andreacensi/act4e:spring2021
+FROM docker.io/andreacensi/act4e:spring2021
 
 WORKDIR /ACT4E
 
