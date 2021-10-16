@@ -1,12 +1,14 @@
 all:
 
+REGISTRY ?= reg-z7-prod.zuper.ai
+
 tag=mytag
 
 pull:
-	docker pull andreacensi/act4e:spring2021
+	docker pull ${REGISTRY}/act4e/act4e-tests:alphubel
 
 build: pull
-	docker build  -t $(tag) .
+	docker build -t $(tag) .
 
 
 check: build

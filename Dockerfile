@@ -1,4 +1,5 @@
-FROM docker.io/andreacensi/act4e:spring2021
+ARG REGISTRY
+FROM ${REGISTRY}/act4e/act4e-tests:alphubel
 
 WORKDIR /ACT4E
 
