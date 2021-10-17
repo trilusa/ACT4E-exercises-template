@@ -1,11 +1,11 @@
 all:
 
-REGISTRY ?= reg-z7-prod.zuper.ai
+DOCKER_REGISTRY ?= reg-z7-prod.zuper.ai
 
 tag=mytag
 
 pull:
-	docker pull ${REGISTRY}/act4e/act4e-tests:alphubel
+	docker pull ${DOCKER_REGISTRY}/act4e/act4e-tests:alphubel
 
 build: pull
 	docker build -t $(tag) .

@@ -1,5 +1,5 @@
-ARG REGISTRY
-FROM ${REGISTRY}/act4e/act4e-tests:alphubel
+ARG DOCKER_REGISTRY
+FROM ${DOCKER_REGISTRY}/act4e/act4e-tests:alphubel
 
 WORKDIR /ACT4E
 
