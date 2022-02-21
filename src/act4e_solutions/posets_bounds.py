@@ -3,12 +3,9 @@ from typing import Any, List, Optional, overload, TypeVar
 import act4e_interfaces as I
 
 E = TypeVar("E")
-X = TypeVar("X")
+X = TypeVar("X") 
 
-__all__ = ["MyFinitePosetMeasurement"]
-
-
-class MyFinitePosetMeasurement(I.FinitePosetMeasurement):
+class SolFinitePosetMeasurement(I.FinitePosetMeasurement):
     def height(self, fp: I.FinitePoset[Any]) -> int:
         raise NotImplementedError()
 
@@ -16,7 +13,7 @@ class MyFinitePosetMeasurement(I.FinitePosetMeasurement):
         raise NotImplementedError()
 
 
-class MyFinitePosetConstructionOpposite(I.FinitePosetConstructionOpposite):
+class SolFinitePosetConstructionOpposite(I.FinitePosetConstructionOpposite):
     @overload
     def opposite(self, p: I.FinitePoset[X]) -> I.FinitePoset[X]:
         ...
@@ -29,7 +26,7 @@ class MyFinitePosetConstructionOpposite(I.FinitePosetConstructionOpposite):
         raise NotImplementedError()
 
 
-class MyFinitePosetSubsetProperties(I.FinitePosetSubsetProperties):
+class SolFinitePosetSubsetProperties(I.FinitePosetSubsetProperties):
     def is_chain(self, fp: I.FinitePoset[X], s: List[X]) -> bool:
         raise NotImplementedError()
 
@@ -37,7 +34,7 @@ class MyFinitePosetSubsetProperties(I.FinitePosetSubsetProperties):
         raise NotImplementedError()
 
 
-class MyFinitePosetSubsetProperties2(I.FinitePosetSubsetProperties2):
+class SolFinitePosetSubsetProperties2(I.FinitePosetSubsetProperties2):
 
     def is_lower_set(self, fp: I.FinitePoset[X], s: List[X]) -> bool:
         raise NotImplementedError()
@@ -46,7 +43,7 @@ class MyFinitePosetSubsetProperties2(I.FinitePosetSubsetProperties2):
         raise NotImplementedError()
 
 
-class MyFinitePosetClosures(I.FinitePosetClosures):
+class SolFinitePosetClosures(I.FinitePosetClosures):
     def upper_closure(self, fp: I.FinitePoset[X], s: List[X]) -> List[X]:
         raise NotImplementedError()
 
@@ -54,7 +51,7 @@ class MyFinitePosetClosures(I.FinitePosetClosures):
         raise NotImplementedError()
 
 
-class MyFinitePosetInfSup(I.FinitePosetInfSup):
+class SolFinitePosetInfSup(I.FinitePosetInfSup):
     def lower_bounds(self, fp: I.FinitePoset[E], s: List[E]) -> List[E]:
         raise NotImplementedError()
 
@@ -68,7 +65,7 @@ class MyFinitePosetInfSup(I.FinitePosetInfSup):
         raise NotImplementedError()
 
 
-class MyFinitePosetMinMax(I.FinitePosetMinMax):
+class SolFinitePosetMinMax(I.FinitePosetMinMax):
     def minimal(self, fp: I.FinitePoset[E], S: List[E]) -> List[E]:
         raise NotImplementedError()
 

@@ -7,7 +7,7 @@ E = TypeVar("E")
 X = TypeVar("X")
 
 
-class MyFinitePosetConstructionTwisted(I.FinitePosetConstructionTwisted):
+class SolFinitePosetConstructionTwisted(I.FinitePosetConstructionTwisted):
     @overload
     def twisted(self, s: I.FinitePoset[X]) -> I.FinitePosetOfIntervals[X, Any]:
         ...
@@ -20,7 +20,7 @@ class MyFinitePosetConstructionTwisted(I.FinitePosetConstructionTwisted):
         raise NotImplementedError()
 
 
-class MyFinitePosetConstructionArrow(I.FinitePosetConstructionArrow):
+class SolFinitePosetConstructionArrow(I.FinitePosetConstructionArrow):
     @overload
     def arrow(self, s: I.FinitePoset[X]) -> I.FinitePosetOfIntervals[X, Any]:
         ...

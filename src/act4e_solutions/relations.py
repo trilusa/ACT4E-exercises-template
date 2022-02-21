@@ -12,7 +12,7 @@ A = TypeVar("A")
 B = TypeVar("B")
 
 
-class MyFiniteRelationProperties(I.FiniteRelationProperties):
+class SolFiniteRelationProperties(I.FiniteRelationProperties):
     def is_surjective(self, fr: I.FiniteRelation[Any, Any]) -> bool:
         raise NotImplementedError()
 
@@ -26,12 +26,12 @@ class MyFiniteRelationProperties(I.FiniteRelationProperties):
         raise NotImplementedError()
 
 
-class MyFiniteRelationOperations(I.FiniteRelationOperations):
+class SolFiniteRelationOperations(I.FiniteRelationOperations):
     def transpose(self, fr: I.FiniteRelation[A, B]) -> I.FiniteRelation[B, A]:
         raise NotImplementedError()
 
 
-class MyFiniteEndorelationProperties(I.FiniteEndorelationProperties):
+class SolFiniteEndorelationProperties(I.FiniteEndorelationProperties):
     def is_reflexive(self, fr: I.FiniteRelation[Any, Any]) -> bool:
         raise NotImplementedError()
 
@@ -51,11 +51,11 @@ class MyFiniteEndorelationProperties(I.FiniteEndorelationProperties):
         raise NotImplementedError()
 
 
-class MyFiniteEndorelationOperations(I.FiniteEndorelationOperations):
+class SolFiniteEndorelationOperations(I.FiniteEndorelationOperations):
     def transitive_closure(self, fr: I.FiniteRelation[E, E]) -> I.FiniteRelation[E, E]:
         raise NotImplementedError()
 
 
-class MyFiniteRelationCompose(I.FiniteRelationCompose):
+class SolFiniteRelationCompose(I.FiniteRelationCompose):
     def compose(self, fr1: FiniteRelation[E1, E2], fr2: FiniteRelation[E2, E3]) -> I.FiniteRelation[E1, E3]:
         raise NotImplementedError()

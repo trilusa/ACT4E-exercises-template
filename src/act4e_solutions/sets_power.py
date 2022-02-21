@@ -5,7 +5,7 @@ import act4e_interfaces as I
 X = TypeVar("X")
 
 
-class MyMakePowerSet(I.MakePowerSet):
+class SolMakePowerSet(I.MakePowerSet):
     @overload
     def powerset(self, s: I.FiniteSet[X]) -> I.FiniteSetOfFiniteSubsets[X, Any]:
         ...

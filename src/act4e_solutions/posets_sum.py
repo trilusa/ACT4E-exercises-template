@@ -5,7 +5,7 @@ import act4e_interfaces as I
 X = TypeVar("X")
 
 
-class MyFinitePosetConstructionSum(I.FinitePosetConstructionSum):
+class SolFinitePosetConstructionSum(I.FinitePosetConstructionSum):
     @overload
     def disjoint_union(self, ps: Sequence[I.FinitePoset[X]]) -> I.FinitePosetDisjointUnion[X, Any]:
         ...

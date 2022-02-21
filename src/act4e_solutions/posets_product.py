@@ -5,6 +5,6 @@ import act4e_interfaces as I
 X = TypeVar("X")
 
 
-class MyFinitePosetConstructionProduct(I.FinitePosetConstructionProduct):
+class SolFinitePosetConstructionProduct(I.FinitePosetConstructionProduct):
     def product(self, ps: Sequence[I.FinitePoset[X]]) -> I.FinitePosetProduct[X, Any]:
         raise NotImplementedError()

@@ -1,14 +1,13 @@
 from typing import Any, TypeVar
 
 import act4e_interfaces as I
-
-__all__ = ["MyFiniteMapRepresentation"]
+ 
 
 A = TypeVar("A")
 B = TypeVar("B")
 
 
-class MyFiniteMapRepresentation(I.FiniteMapRepresentation):
+class SolFiniteMapRepresentation(I.FiniteMapRepresentation):
 
     def load(self, h: I.IOHelper, s: I.FiniteMap_desc) -> I.FiniteMap[A, B]:
         raise NotImplementedError()

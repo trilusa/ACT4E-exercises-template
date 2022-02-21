@@ -5,7 +5,7 @@ import act4e_interfaces as I
 X = TypeVar("X")
 
 
-class MyEnumerableSetsOperations(I.EnumerableSetsOperations):
+class SolEnumerableSetsOperations(I.EnumerableSetsOperations):
     def make_set_sequence(self, f: Callable[[int], X]) -> I.EnumerableSet[X]:
         raise NotImplementedError()
 

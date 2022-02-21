@@ -7,6 +7,6 @@ B = TypeVar("B")
 X = TypeVar("X")
 
 
-class MyMonoidalPosetOperations(I.MonoidalPosetOperations):
+class SolMonoidalPosetOperations(I.MonoidalPosetOperations):
     def is_monoidal_poset(self, fp: I.FinitePoset[X], fm: I.FiniteMonoid[X]) -> bool:
         raise NotImplementedError()

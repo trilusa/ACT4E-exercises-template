@@ -7,7 +7,7 @@ B = TypeVar("B")
 C = TypeVar("C")
 
 
-class MyFiniteMapOperations(I.FiniteMapOperations):
+class SolFiniteMapOperations(I.FiniteMapOperations):
     @overload
     def identity(self, s: I.FiniteSet[A]) -> I.FiniteMap[A, A]:
         ...

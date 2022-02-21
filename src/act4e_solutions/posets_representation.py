@@ -3,7 +3,7 @@ from typing import Any
 import act4e_interfaces as I
 
 
-class MyFinitePosetRepresentation(I.FinitePosetRepresentation):
+class SolFinitePosetRepresentation(I.FinitePosetRepresentation):
 
     def load(self, h: I.IOHelper, s: I.FinitePoset_desc) -> I.FinitePoset[Any]:
         raise NotImplementedError()

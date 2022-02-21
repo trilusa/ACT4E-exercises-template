@@ -1,11 +1,9 @@
 from typing import Any
 
 import act4e_interfaces as I
+ 
 
-__all__ = ["MyFiniteSetRepresentation"]
-
-
-class MyFiniteSetRepresentation(I.FiniteSetRepresentation):
+class SolFiniteSetRepresentation(I.FiniteSetRepresentation):
     def load(self, h: I.IOHelper, data: I.FiniteSet_desc) -> I.FiniteSet[Any]:
         raise NotImplementedError()
 

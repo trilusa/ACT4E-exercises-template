@@ -1,18 +1,16 @@
 from typing import Any, overload, Sequence, TypeVar
 
 import act4e_interfaces as I
-
-__all__ = ["MyMakeSetUnion", "MyMakeSetIntersection", "MyFiniteSetProperties"]
-
+ 
 X = TypeVar("X")
 
 
-class MyFiniteSetProperties(I.FiniteSetProperties):
+class SolFiniteSetProperties(I.FiniteSetProperties):
     def is_subset(self, a: I.FiniteSet[X], b: I.FiniteSet[X]) -> bool:
         raise NotImplementedError()
 
 
-class MyMakeSetUnion(I.MakeSetUnion):
+class SolMakeSetUnion(I.MakeSetUnion):
     @overload
     def union(self, components: Sequence[I.FiniteSet[X]]) -> I.FiniteSetUnion[X, Any]:
         ...
@@ -25,6 +23,6 @@ class MyMakeSetUnion(I.MakeSetUnion):
         raise NotImplementedError()
 
 
-class MyMakeSetIntersection(I.MakeSetIntersection):
+class SolMakeSetIntersection(I.MakeSetIntersection):
     def intersection(self, components: Sequence[I.FiniteSet[X]]) -> I.FiniteSet[X]:
         raise NotImplementedError()

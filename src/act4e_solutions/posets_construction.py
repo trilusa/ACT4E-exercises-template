@@ -5,7 +5,7 @@ import act4e_interfaces as I
 X = TypeVar("X")
 
 
-class MyPosetConstructionPower(I.PosetConstructionPower):
+class SolPosetConstructionPower(I.PosetConstructionPower):
     @overload
     def powerposet(self, s: I.FiniteSet[X]) -> I.FinitePosetOfFiniteSubsets[X, Any]:
         ...
