@@ -8,7 +8,7 @@ pull:
 	docker pull ${DOCKER_REGISTRY}/act4e/act4e-tests:alphubel
 
 build: pull
-	docker build -t $(tag) .
+	docker build --build-arg DOCKER_REGISTRY=${DOCKER_REGISTRY} -t $(tag) .
 
 
 check: build
