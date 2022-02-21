@@ -12,9 +12,11 @@ build: pull
 
 
 check: build
-	docker run -it --rm -v $(PWD)/out-results:/ACT4E/out-results $(tag) act4e-tests --module act4e_solutions
+	docker run -it --rm -v $(PWD)/out-results:/ACT4E/out-results $(tag) \
+		act4e-test --collections act4e_checks --module act4e_solutions
 
 
 check-%: build
-	docker run -it --rm -v $(PWD)/out-results:/ACT4E/out-results $(tag) act4e-tests --module act4e_solutions --group $*
+	docker run -it --rm -v $(PWD)/out-results:/ACT4E/out-results $(tag) \
+		act4e-test --collections act4e_checks --module act4e_solutions --group $*
 
