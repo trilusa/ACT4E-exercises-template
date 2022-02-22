@@ -3,7 +3,8 @@ from typing import Any, List, Optional, overload, TypeVar
 import act4e_interfaces as I
 
 E = TypeVar("E")
-X = TypeVar("X") 
+X = TypeVar("X")
+
 
 class SolFinitePosetMeasurement(I.FinitePosetMeasurement):
     def height(self, fp: I.FinitePoset[Any]) -> int:
@@ -35,7 +36,6 @@ class SolFinitePosetSubsetProperties(I.FinitePosetSubsetProperties):
 
 
 class SolFinitePosetSubsetProperties2(I.FinitePosetSubsetProperties2):
-
     def is_lower_set(self, fp: I.FinitePoset[X], s: List[X]) -> bool:
         raise NotImplementedError()
 
