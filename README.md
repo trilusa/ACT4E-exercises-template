@@ -6,6 +6,8 @@ Install VS Code.
 
 Select File -> Open and select *the entire folder*.
 
+VS Code will propose to install "Dev Container". Click "install".
+
 VS Code will give you a message similar to:
 
 > Folder contains a Dev Container configuration file. Reopen folder to develop in a container.
