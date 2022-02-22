@@ -3,7 +3,7 @@ from typing import Any, List, Optional, overload, TypeVar
 import act4e_interfaces as I
 
 E = TypeVar("E")
-X = TypeVar("X") 
+X = TypeVar("X")
 
 class SolFinitePosetMeasurement(I.FinitePosetMeasurement):
     def height(self, fp: I.FinitePoset[Any]) -> int:
@@ -16,14 +16,14 @@ class SolFinitePosetMeasurement(I.FinitePosetMeasurement):
 class SolFinitePosetConstructionOpposite(I.FinitePosetConstructionOpposite):
     @overload
     def opposite(self, p: I.FinitePoset[X]) -> I.FinitePoset[X]:
-        ...
+        ... # this is just a type declaration - do not implement
 
     @overload
     def opposite(self, p: I.Poset[X]) -> I.Poset[X]:
-        ...
+        ... # this is just a type declaration - do not implement
 
     def opposite(self, m: I.Poset[X]) -> I.Poset[X]:
-        raise NotImplementedError()
+        raise NotImplementedError() # implement here
 
 
 class SolFinitePosetSubsetProperties(I.FinitePosetSubsetProperties):

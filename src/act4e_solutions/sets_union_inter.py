@@ -8,14 +8,14 @@ X = TypeVar("X")
 class SolMakeSetUnion(I.MakeSetUnion):
     @overload
     def union(self, components: Sequence[I.FiniteSet[X]]) -> I.FiniteSetUnion[X, Any]:
-        ...
+        ... # this is just a type declaration - do not implement
 
     @overload
     def union(self, components: Sequence[I.EnumerableSet[X]]) -> I.EnumerableSetUnion[X, Any]:
-        ...
+        ... # this is just a type declaration - do not implement
 
     def union(self, components: Sequence[I.EnumerableSet[X]]) -> I.EnumerableSetUnion[X, Any]:
-        raise NotImplementedError()
+        raise NotImplementedError() # implement here
 
 
 class SolSetoidOperations(I.SetoidOperations):
