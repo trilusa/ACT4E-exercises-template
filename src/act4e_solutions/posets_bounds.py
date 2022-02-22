@@ -35,7 +35,6 @@ class SolFinitePosetSubsetProperties(I.FinitePosetSubsetProperties):
 
 
 class SolFinitePosetSubsetProperties2(I.FinitePosetSubsetProperties2):
-
     def is_lower_set(self, fp: I.FinitePoset[X], s: List[X]) -> bool:
         raise NotImplementedError()
 

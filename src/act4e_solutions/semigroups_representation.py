@@ -6,7 +6,6 @@ X = TypeVar("X")
 
 
 class SolFiniteSemigroupRepresentation(I.FiniteSemigroupRepresentation):
-
     def load(self, h: I.IOHelper, s: I.FiniteSemigroup_desc) -> I.FiniteSemigroup[Any]:
         raise NotImplementedError()
 

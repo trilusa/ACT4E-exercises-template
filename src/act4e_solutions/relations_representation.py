@@ -7,7 +7,6 @@ B = TypeVar("B")
 
 
 class SolFiniteRelationRepresentation(I.FiniteRelationRepresentation):
-
     def load(self, h: I.IOHelper, data: I.FiniteRelation_desc) -> I.FiniteRelation[A, B]:
         raise NotImplementedError()
 
