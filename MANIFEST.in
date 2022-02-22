@@ -12,10 +12,6 @@ exclude LICENSE*
 prune .*
 exclude .*
 exclude src/conf.py
-recursive-exclude src *.rst
-recursive-exclude src *.less
-recursive-include src *.css
-recursive-include src *.sql
 prune src/**/__pycache__
 prune src/*_tests*
 prune out
