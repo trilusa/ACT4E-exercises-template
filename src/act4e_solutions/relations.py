@@ -30,6 +30,9 @@ class SolFiniteRelationOperations(I.FiniteRelationOperations):
     def transpose(self, fr: I.FiniteRelation[A, B]) -> I.FiniteRelation[B, A]:
         raise NotImplementedError()
 
+    def as_relation(self, f: I.FiniteMap[A, B]) -> I.FiniteRelation[A, B]:
+        raise NotImplementedError()
+
 
 class SolFiniteEndorelationProperties(I.FiniteEndorelationProperties):
     def is_reflexive(self, fr: I.FiniteRelation[Any, Any]) -> bool:

@@ -23,6 +23,3 @@ class SolFiniteMapOperations(I.FiniteMapOperations):
 
     def compose(self, f: I.FiniteMap[A, B], g: I.FiniteMap[B, C]) -> I.FiniteMap[A, C]:
         raise NotImplementedError()
-
-    def as_relation(self, f: I.FiniteMap[A, B]) -> I.FiniteRelation[A, B]:
-        raise NotImplementedError()
