@@ -1,18 +1,11 @@
-from typing import Any, overload, Sequence, TypeVar
+from typing import Any, Sequence, TypeVar
 
 import act4e_interfaces as I
 
 X = TypeVar("X")
 
 
-class SolMakeSetProduct(I.MakeSetProduct):
-    @overload
+class SolFiniteMakeSetProduct(I.FiniteMakeSetProduct):
+
     def product(self, components: Sequence[I.FiniteSet[X]]) -> I.FiniteSetProduct[X, Any]:
-        ... # this is just a type declaration - do not implement
-
-    @overload
-    def product(self, components: Sequence[I.Setoid[X]]) -> I.SetProduct[X, Any]:
-        ... # this is just a type declaration - do not implement
-
-    def product(self, components: Sequence[I.Setoid[X]]) -> I.SetProduct[X, Any]:
-        raise NotImplementedError() # implement here
+        raise NotImplementedError()  # implement here

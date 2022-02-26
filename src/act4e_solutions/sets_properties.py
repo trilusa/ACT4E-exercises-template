@@ -10,19 +10,11 @@ class SolFiniteSetProperties(I.FiniteSetProperties):
         raise NotImplementedError()
 
 
-class SolMakeSetUnion(I.MakeSetUnion):
-    @overload
+class SolFiniteMakeSetUnion(I.FiniteMakeSetUnion):
     def union(self, components: Sequence[I.FiniteSet[X]]) -> I.FiniteSetUnion[X, Any]:
-        ...
-
-    @overload
-    def union(self, components: Sequence[I.EnumerableSet[X]]) -> I.EnumerableSetUnion[X, Any]:
-        ...
-
-    def union(self, components: Sequence[I.Setoid[X]]) -> I.SetUnion[X, Any]:
-        raise NotImplementedError()
+        raise NotImplementedError() # implement here
 
 
-class SolMakeSetIntersection(I.MakeSetIntersection):
+class SolFiniteMakeSetIntersection(I.FiniteMakeSetIntersection):
     def intersection(self, components: Sequence[I.FiniteSet[X]]) -> I.FiniteSet[X]:
         raise NotImplementedError()

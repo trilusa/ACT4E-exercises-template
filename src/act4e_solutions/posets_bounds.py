@@ -14,15 +14,7 @@ class SolFinitePosetMeasurement(I.FinitePosetMeasurement):
 
 
 class SolFinitePosetConstructionOpposite(I.FinitePosetConstructionOpposite):
-    @overload
     def opposite(self, p: I.FinitePoset[X]) -> I.FinitePoset[X]:
-        ... # this is just a type declaration - do not implement
-
-    @overload
-    def opposite(self, p: I.Poset[X]) -> I.Poset[X]:
-        ... # this is just a type declaration - do not implement
-
-    def opposite(self, m: I.Poset[X]) -> I.Poset[X]:
         raise NotImplementedError() # implement here
 
 

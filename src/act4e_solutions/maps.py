@@ -1,4 +1,4 @@
-from typing import overload, TypeVar
+from typing import TypeVar
 
 import act4e_interfaces as I
 
@@ -8,18 +8,9 @@ C = TypeVar("C")
 
 
 class SolFiniteMapOperations(I.FiniteMapOperations):
-    @overload
-    def identity(self, s: I.FiniteSet[A]) -> I.FiniteMap[A, A]:
-        ... # this is just a type declaration - do not implement
-
-    @overload
-    def identity(self, s: I.Setoid[A]) -> I.Mapping[A, A]:
-        ... # this is just a type declaration - do not implement
 
     def identity(self, s: I.Setoid[A]) -> I.Mapping[A, A]:
-        raise NotImplementedError() # implement here
-
-    #
+        raise NotImplementedError()
 
     def compose(self, f: I.FiniteMap[A, B], g: I.FiniteMap[B, C]) -> I.FiniteMap[A, C]:
         raise NotImplementedError()
