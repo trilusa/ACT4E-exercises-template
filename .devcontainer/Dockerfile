@@ -10,9 +10,8 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 
 RUN pip3 --disable-pip-version-check --no-cache-dir install -U pip pre-commit 
 
-
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
-COPY requirements.txt /tmp/pip-tmp/
+COPY .devcontainer/requirements.txt /tmp/pip-tmp/
 RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
    && rm -rf /tmp/pip-tmp
 
@@ -22,3 +21,13 @@ RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requ
 
 # [Optional] Uncomment this line to install global node packages.
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
+
+COPY .devcontainer/act4e-check /usr/local/bin
+RUN chmod +x /usr/local/bin/act4e-check
+
+
+COPY src src
+COPY setup.py .
+
+RUN python3 -m pip install -e .
+

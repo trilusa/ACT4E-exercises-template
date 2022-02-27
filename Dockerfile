@@ -6,7 +6,7 @@ RUN python3 -m pip install -U pip -v
 WORKDIR /ACT4E
 
 RUN uname -a
-COPY requirements.txt .
+COPY .devcontainer/requirements.txt .
 RUN python3 -m pip install -r requirements.txt
 
 COPY src src
