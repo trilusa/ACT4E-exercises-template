@@ -3,10 +3,14 @@
 ## Setup
 
 ### Install Docker
-> (Mac, Linux) Follow the [installation instructions](https://docs.docker.com/get-docker/)
-> (Windows):
->> Follow the manual installation steps for Windows Subsystem for Linux [here](https://docs.microsoft.com/en-us/windows/wsl/install). On step 1, follow the recommendation of updating to WSL 2. On step 6, you can download Ubuntu 18.04 LTS. You do not necessarily need to install Windows Terminal.
->> Now go [here](https://docs.docker.com/desktop/windows/install/) and follow the "Install Docker Desktop on Windows" instructions. You can then start Docker Desktop and follow the quick start quide.
+<ul>
+    <li> (Mac, Linux) Follow the [installation instructions](https://docs.docker.com/get-docker/) </li>
+    <li>(Windows):
+         <li>Follow the manual installation steps for Windows Subsystem for Linux [here](https://docs.microsoft.com/en-us/windows/wsl/install). On step 1, follow the recommendation of updating to WSL 2. On step 6, you can download Ubuntu 18.04 LTS. You do not necessarily need to install Windows Terminal. </li>
+            <li>Now go [here](https://docs.docker.com/desktop/windows/install/) and follow the "Install Docker Desktop on Windows" instructions. You can then start Docker Desktop and follow the quick start quide.</li>
+            </ul>
+            </li>
+            </ul>
 
 
 ### Install VS Code.
