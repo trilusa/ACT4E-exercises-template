@@ -32,7 +32,7 @@ Create a new terminal using Terminal -> New Terminal.
 
 Run the following:
 
-    make check-TestSimpleIntro
+    act4e-check TestSimpleIntro
 
 This will have created a file `out-results/result-TestSimpleIntro.html`.
 
