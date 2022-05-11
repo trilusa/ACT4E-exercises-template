@@ -26,8 +26,8 @@ COPY .devcontainer/act4e-check /usr/local/bin
 RUN chmod +x /usr/local/bin/act4e-check
 
 
-COPY src src
-COPY setup.py .
+# COPY src src
+# COPY setup.py .
 
-RUN python3 -m pip install -e .
+# RUN python3 -m pip install -e .
 
